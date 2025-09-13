@@ -64,7 +64,7 @@ div {
 
 p,
 h1,
-h2 {
+h2, h3 {
   margin-top: 0;
   margin-bottom: 0;
   color: light-dark(var(--light-white-1), var(--dark-white-1));
@@ -144,6 +144,7 @@ body {
   align-self: flex-start;
   margin-left: 8px;
   margin-bottom: 12px;
+  margin-top: 24px;
 }
 
 .card {
@@ -162,4 +163,59 @@ body {
   display: flex;
   flex-direction: column;
   margin-left: 16px;
+}
+
+ul{
+  position: relative;
+  list-style: none;
+  padding-left: 30px;
+  margin: 0;
+}
+
+ul::before{
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 2;
+  bottom: 0;
+  width: 4px;
+  background-color: ligt-dark(var(--light-vegas-gold), var(--dark-vegas-gold));
+}
+
+li{
+  position: relative;
+  margin-bottom: 24px;
+  padding-left: 20px;
+}
+
+li::before{
+  content: '';
+  position: absolute;
+  left: -7px;
+  top: 12px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: light-dark(var(--light-orange-yellow-crayola), var(--dark-orange-yellow-crayola));
+  border: 2px solid light-dark(var(--light-white-1), var(--dark-white--light-white-1));
+}
+
+.experience-header{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  
+}
+
+.experience-title{
+  font-size: 24px;
+}
+
+.experience-subtitle{
+  font-size: 18px;
+  padding-left: 8px;
+}
+
+.experience-date{
+  color: light-dark(var(--light-vegas-gold), var(--dark-vegas-gold));
 }
