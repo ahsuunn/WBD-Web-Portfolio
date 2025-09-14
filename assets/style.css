@@ -173,36 +173,35 @@ ul{
   margin: 0;
 }
 
-ul::before{
+/* ul::before{
   content: '';
   position: absolute;
-  left: 9px;
+  left: 24px;
   top: 18px;
-  bottom: 18px;
+  bottom: 66px;
   width: 4px;
   background-color: light-dark(var(--light-vegas-gold), var(--dark-vegas-gold));
-}
+} */
 
 li{
   position: relative;
   margin-bottom: 24px;
-  padding-left: 20px;
+  padding-left: 24px;
 }
 
 li:last-child{
-  margin-bottom: 0;
+  margin-bottom: 0px;
 }
 
 li::before{
   content: '';
   position: absolute;
-  left: -20px;
+  left: -10px;
   top: 12px;
   width: 12px;
   height: 12px;
   border-radius: 50%;
   background-color: light-dark(var(--light-orange-yellow-crayola), var(--dark-orange-yellow-crayola));
-  border: 1px solid light-dark(var(--light-white-1), var(--dark-white-1));
   z-index: 1;
 }
 
@@ -281,3 +280,50 @@ li::before{
   line-height: 1.6;
   color: light-dark(var(--light-light-gray), var(--dark-light-gray));
 }
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  margin-top: 60px;
+  border-top: 1px solid light-dark(var(--light-eerie-black-1), var(--dark-eerie-black-1));
+}
+
+.footer-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: light-dark(var(--light-white-1), var(--dark-white-1));
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background-color: light-dark(var(--light-jet), var(--dark-jet));
+  border: 1px solid light-dark(var(--light-eerie-black-1), var(--dark-eerie-black-1));
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-link:hover {
+  background-color: light-dark(var(--light-orange-yellow-crayola), var(--dark-orange-yellow-crayola));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px light-dark(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+}
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+  transition: filter 0.3s ease-in-out;
+}
+
