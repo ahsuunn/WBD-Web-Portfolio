@@ -127,7 +127,6 @@ body {
   color: light-dark(var(--light-light-gray), var(--dark-light-gray));
 }
 
-/* Mobile responsive styles */
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
@@ -241,16 +240,6 @@ ul{
   margin: 0;
 }
 
-/* ul::before{
-  content: '';
-  position: absolute;
-  left: 24px;
-  top: 18px;
-  bottom: 66px;
-  width: 4px;
-  background-color: light-dark(var(--light-vegas-gold), var(--dark-vegas-gold));
-} */
-
 li{
   position: relative;
   margin-bottom: 24px;
@@ -293,13 +282,78 @@ li::before{
   color: light-dark(var(--light-vegas-gold), var(--dark-vegas-gold));
 }
 
+.tech-stack {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 24px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: light-dark(var(--light-jet), var(--dark-jet));
+  border: 1px solid light-dark(var(--light-eerie-black-1), var(--dark-eerie-black-1));
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.tech-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px light-dark(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+  border-color: light-dark(var(--light-orange-yellow-crayola), var(--dark-orange-yellow-crayola));
+}
+
+.tech-logo {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.tech-item:hover .tech-logo {
+  transform: scale(1.1);
+}
+
+.tech-name {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  color: light-dark(var(--light-white-1), var(--dark-white-1));
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .tech-stack {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 16px;
+  }
+  
+  .tech-item {
+    padding: 16px;
+  }
+  
+  .tech-logo {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+  }
+  
+  .tech-name {
+    font-size: 12px;
+  }
+}
+
 
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 16px;
   width: 100%;
-  max-width: 1200px;
 }
 
 .project-card {
