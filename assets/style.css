@@ -133,6 +133,7 @@ body {
     var(--light-orange-yellow-crayola),
     var(--dark-orange-yellow-crayola)
   );
+  font-size: 48px;
 }
 
 .focuses {
@@ -175,11 +176,11 @@ ul{
 ul::before{
   content: '';
   position: absolute;
-  left: 15px;
-  top: 2;
-  bottom: 0;
+  left: 9px;
+  top: 18px;
+  bottom: 18px;
   width: 4px;
-  background-color: ligt-dark(var(--light-vegas-gold), var(--dark-vegas-gold));
+  background-color: light-dark(var(--light-vegas-gold), var(--dark-vegas-gold));
 }
 
 li{
@@ -188,16 +189,21 @@ li{
   padding-left: 20px;
 }
 
+li:last-child{
+  margin-bottom: 0;
+}
+
 li::before{
   content: '';
   position: absolute;
-  left: -7px;
+  left: -20px;
   top: 12px;
   width: 12px;
   height: 12px;
   border-radius: 50%;
   background-color: light-dark(var(--light-orange-yellow-crayola), var(--dark-orange-yellow-crayola));
-  border: 2px solid light-dark(var(--light-white-1), var(--dark-white--light-white-1));
+  border: 1px solid light-dark(var(--light-white-1), var(--dark-white-1));
+  z-index: 1;
 }
 
 .experience-header{
@@ -218,4 +224,60 @@ li::before{
 
 .experience-date{
   color: light-dark(var(--light-vegas-gold), var(--dark-vegas-gold));
+}
+
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: light-dark(var(--light-jet), var(--dark-jet));
+  border: 1px solid light-dark(var(--light-eerie-black-1), var(--dark-eerie-black-1));
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px light-dark(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+}
+
+.project-header {
+  display: flex;
+  background-color: light-dark(var(--light-jet), var(--dark-jet));
+
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.project-title {
+  font-size: 20px;
+  margin-right: 12px;
+  flex: 1;
+}
+
+.project-date {
+  font-size: 14px;
+  color: light-dark(var(--light-vegas-gold), var(--dark-vegas-gold));
+  white-space: nowrap;
+}
+
+.project-role {
+  font-size: 16px;
+  color: light-dark(var(--light-orange-yellow-crayola), var(--dark-orange-yellow-crayola));
+  margin-bottom: 12px;
+}
+
+.project-card p {
+  line-height: 1.6;
+  color: light-dark(var(--light-light-gray), var(--dark-light-gray));
 }
