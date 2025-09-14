@@ -225,6 +225,14 @@ body {
   background-color: light-dark(var(--light-jet), var(--dark-jet));
   margin-left: 8px;
   margin-right: 8px;
+  border: 1px solid light-dark(var(--light-jet), var(--dark-jet));
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px light-dark(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+  border-color: light-dark(var(--light-orange-yellow-crayola), var(--dark-orange-yellow-crayola));
 }
 
 .card-description {
@@ -297,9 +305,8 @@ li::before{
   padding: 20px;
   border-radius: 12px;
   background-color: light-dark(var(--light-jet), var(--dark-jet));
-  border: 1px solid light-dark(var(--light-eerie-black-1), var(--dark-eerie-black-1));
+  border: 1px solid light-dark(var(--light-jet), var(--dark-jet));
   transition: all 0.3s ease-in-out;
-  cursor: pointer;
 }
 
 .tech-item:hover {
@@ -362,13 +369,15 @@ li::before{
   padding: 20px;
   border-radius: 12px;
   background-color: light-dark(var(--light-jet), var(--dark-jet));
-  border: 1px solid light-dark(var(--light-eerie-black-1), var(--dark-eerie-black-1));
+  border: 1px solid light-dark(var(--light-jet), var(--dark-jet));
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .project-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 25px light-dark(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+  border-color: light-dark(var(--light-orange-yellow-crayola), var(--dark-orange-yellow-crayola));
+
 }
 
 .project-header {
@@ -432,7 +441,6 @@ li::before{
   height: 50px;
   border-radius: 12px;
   background-color: light-dark(var(--light-jet), var(--dark-jet));
-  border: 1px solid light-dark(var(--light-eerie-black-1), var(--dark-eerie-black-1));
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
